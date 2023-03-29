@@ -17,11 +17,11 @@ the following areas:
 
 CantripOS的测试支持是一个正在进行中的工作。测试分为以下几个领域：
 
-- *单元测试：Rust Cargo单元测试
-- *sel4test：seL4的sel4test框架
-- *shell测试：内置于CantripOS shell中的测试
-- *应用测试：测试应用程序（主要是为了使用SDK）
-- *机器人测试：利用CantripOS shell的自动化测试
+- *单元测试*：Rust Cargo单元测试
+- *sel4test*：seL4的sel4test框架
+- *shell测试*：内置于CantripOS shell中的测试
+- *应用测试*：测试应用程序（主要是为了使用SDK）
+- *机器人测试*：利用CantripOS shell的自动化测试
 
 <!--
 
@@ -288,8 +288,8 @@ the same thing and can be run with the "source" command; e.g.
 
 -->
 
-默认情况下，没有交互式Shell的平台会在其内置包中包含一个名为autostart.repl的脚本，
-用于运行可用的应用程序。拥有交互式命令行的系统有一个名为builtins.repl的文件，
+默认情况下，没有交互式Shell的平台会在其内置包中包含一个名为`autostart.repl`的脚本，
+用于运行可用的应用程序。拥有交互式命令行的系统有一个名为*builtins.repl*的文件，
 也可以使用"source"命令运行，执行与自动启动脚本相同的功能；例如：
 
 ```shell
@@ -321,7 +321,7 @@ are included in the *sim/tests* directory.
 机器人测试是指将系统视为黑盒子进行的系统级测试。
 通常这些测试都是自动化的，用于回归测试。
 sel4test机制以及上面描述的许多shell和应用程序测试都可以用于此目的。
-我们在sim/tests目录中包含了使用[Renode的机器人框架](https://renode.readthedocs.io/en/latest/introduction/testing.html)的脚本。
+我们在*sim/tests*目录中包含了使用[Renode的机器人框架](https://renode.readthedocs.io/en/latest/introduction/testing.html)的脚本。
 
 <!--
 
