@@ -70,11 +70,17 @@ Because Sparrow is a CAmkES project you also need
 
 因为Sparrow是一个CAmkES项目，您还需要安装 [CAmkES依赖](https://docs.sel4.systems/projects/buildsystem/host-dependencies.html#camkes-build-dependencies)。
 
+<!--
 ### First time setup.
 
 Sparrow uses [repo](https://gerrit.googlesource.com/git-repo/+/refs/heads/master/README.md)
 to download and piece together Sparrow git repositories as well as dependent projects /
 repositories such as [seL4](https://github.com/seL4).
+-->
+
+### 首次设置
+ 
+Sparrow 使用 [repo](https://gerrit.googlesource.com/git-repo/+/refs/heads/master/README.md) 来下载和组合 Sparrow git 存储库以及类似  [seL4](https://github.com/seL4) 的依赖项目/存储库等。
 
 ``` shell
 $ repo init -u https://github.com/AmbiML/sparrow-manifest -m sparrow-manifest.xml
@@ -181,19 +187,25 @@ CANTRIP> mstats
 2 objs in-use, 196 objs requested
 CANTRIP> EOF
 ```
-
+<!--
 The `m simulate` command can be run repeatedly. If you need to reset
 your setup just remove the build tree and re-run `m simulate`; e.g.
+-->
+命令 `m simulate` 可以重复运行。 如果需要重置设置，只需删除构建树并重新运行 `m simulate` 即可； 例如：
 
 ``` shell
 $ cd sparrow
 $ m clean
 $ m simulate
 ```
-
+<!--
 ### Build system: primer.
 
 The setup procedure required:
+-->
+### 构建系统：基础
+
+所需的设置过程：
 
 ``` shell
 $ export PLATFORM=rpi3
