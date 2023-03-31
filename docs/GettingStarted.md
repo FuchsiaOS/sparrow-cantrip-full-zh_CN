@@ -33,10 +33,14 @@ export PLATFORM=rpi3
 source build/setup.sh
 m simulate-debug
 ```
-
+<!--
 [Beware that if your repo tool is out of date you may need to supply `-b main`
 to the init request as older versions of repo only check for a `master` branch.]
+-->
 
+[请注意，如果您的repo工具过时，您可能需要在init请求中提供-b main参数，因为旧版本的repo只检查主分支。]
+
+<!--
 ### Prerequisites.
 
 Note the above assumes you have the follow prerequisites installed on your system
@@ -53,6 +57,18 @@ and **in your shell's search path**:
 
 Because Sparrow is a CAmkES project you also need
 [CAmkES dependencies](https://docs.sel4.systems/projects/buildsystem/host-dependencies.html#camkes-build-dependencies).
+-->
+
+### 前提条件
+
+请注意，首先确认您已经在系统上安装了下列前提条件，在添加到了您的**shell搜索路径中**：
+
+1. 适用于目标体系结构的GCC（或clang）
+2. Rust；任何nightly版本>=nightly-2021-11-05都可以使用。build/setup.sh脚本中设置了默认版本；如果您使用的版本不同，请编辑shell脚本或在每个工作的shell中导出CANTRIP_RUST_VERSION。请注意，我们使用了各种仅限于nightly版本的功能，这些功能不受Rust稳定版本的支持（例如，覆盖默认的TLS模型）。
+3. python tempita模块。
+4. seL4期望的任何模拟器都适用于您的目标体系结构；例如，对于aarch64，这是qemu-system-aarch64。
+
+因为Sparrow是一个CAmkES项目，您还需要安装 [CAmkES依赖](https://docs.sel4.systems/projects/buildsystem/host-dependencies.html#camkes-build-dependencies)。
 
 ### First time setup.
 
