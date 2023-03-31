@@ -1,4 +1,4 @@
-
+<!--
 ## Getting started with repo & the build system.
 
 CantripOS includes a multi-platform build framework.
@@ -11,6 +11,18 @@ To get started follow these steps:
 2. Download, build, and boot the system to the Cantrip shell prompt.
    For now the only target platform that works is "rpi3"
    (for a raspi3b machine running in simulation on qemu).
+-->
+
+## CantripOS 上手：开始使用 git-repo 并构建系统
+
+CantripOS 包括一个多平台构建框架。
+该框架利用了make、cmake和cargo。
+要开始使用，请按照以下步骤操作：
+
+1. 使用 [repo工具](https://gerrit.googlesource.com/git-repo/+/refs/heads/master/README.md)从GitHub克隆Sparrow项目。我们假设它位于名为"sparrow"的顶级目录下。
+2. 下载、构建并引导系统到Cantrip shell提示符。目前唯一可用的目标平台是"rpi3"（适用于在qemu模拟器上运行的raspi3b机器）。
+
+
 
 ``` shell
 mkdir sparrow
