@@ -281,9 +281,11 @@ $ set-platform rpi3
 $ printenv PLATFORM
 rpi3
 ```
-
+<!--
 There is also a `list-platforms` shell function that you can use in lieu of
 tab completion with the `set-platform` command.
+-->
+另外还有一个 `list-platforms shell` 函数，您可以使用 `set-platform` 命令代替制表符补全。
 
 ### Build system: cleaning build artifacts
 
@@ -298,13 +300,22 @@ of the time you will just want to use:
 ``` shell
 $ m cantrip-clean
 ```
-
+<!--
 which removes all build artifacts for the current platform, or
+-->
+将会为当前平台删除所有的构建包：
 
 ```shell
 $ m clean
 ```
-
+<!--
 which removes all build artifacts for all platforms.
+-->
+则会为所有平台删除所有的构建包。
+
+Fuchsia 中文社区译者补充说明：
+build artifacts 是指源代码通过编译生成的中间或最终结果，例如目标代码、库文件、可执行文件等。在编译过程中，编译器将源代码转换为目标代码或其他可执行文件，并将其输出到一个或多个文件中，这些文件就是build artifacts。
+
+Build artifacts通常是编译系统生成的临时文件，它们是构建过程的产物，包括中间文件、对象文件、库文件、可执行文件等。这些文件可能会被后续的构建流程使用，例如链接器会使用中间文件或对象文件生成可执行文件或库文件。
 
 ### [Next Section: CantripOS software organization](SourceCrates.md)
